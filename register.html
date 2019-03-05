@@ -2,6 +2,28 @@
 <html>
 <head>
     <title>Register</title>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+      fieldset {
+        margin-right: 650px;
+      }
+      input, label {
+        padding: 5px;
+      }
+      label {
+        vertical-align: auto;
+      }
+      footer {
+        position: absolute;
+        width: 100%;
+        bottom: 0; 
+        background: lightgray;
+      }
+    </style>
 </head>
 <body>
     <div>
@@ -11,28 +33,64 @@
     <p>Please fill out the form below</p>
     <div>
       <form action="">
-        <p>Details:</p>
-        <input type="text" placeholder="Email">
+        <fieldset>
+          <legend>Details</legend>
+          <label for="">Email:
+            <input type="email" placeholder="Email">
+          </label>
+          <label for="">Password:
+            <input type="password" placeholder="Password">
+          </label>
+          <br>
+          <label for="">First Name:
+            <input type="text" placeholder="First Name">
+          </label>
+          <label for="">Last Name: 
+            <input type="text" placeholder="Last Name">
+          </label>
+        </fieldset>
         <br>
-        <input type="password" placeholder="Password">
+        <fieldset>
+          <legend>Address</legend>
+          <label for="">Address1:
+            <input type="text" placeholder="Address 1">
+          </label>
+          <label for="">Address2:
+            <input type="text" placeholder="Address 2">
+          </label>
+          <br>
+          <label for="">City:
+            <input type="text" placeholder="City">
+          </label>
+          <label for="">State:
+            <select name="state" id="state">
+              <option value="VA">VA</option>
+              <option value="MD">MD</option>
+              <option value="DC">DC</option>
+              <option value="NY">NY</option>
+            </select>
+          </label>
+          <label for="">Zip:
+            <input type="text" placeholder="Zip">
+          </label>
+        </fieldset>
         <br>
-        <input type="text" placeholder="First Name">
-        <br>
-        <input type="text" placeholder="Last Name">
-        <br>
-        <p>Address</p>
-        <input type="text" placeholder="Address 1">
-        <br>
-        <input type="text" placeholder="Address 2">
-        <br>
-        <input type="text" placeholder="City">
-        <br>
-        <input type="text" placeholder="State">
-        <br>
-        <input type="text" placeholder="Zip">
-        <br>
-        <button>Register</button>
+        <button type="submit">Register</button>
       </form>
     </div>
+    <footer>
+      <div id="footer-nav">
+        <a href="#">About</a>
+        <br>
+        <a href="#">Register</a>
+        <br>
+        <a href="#">Login</a>
+        <br>
+        <a href="#">Logout</a>
+      </div>
+      <div>
+        <p>Drin Kaziu &copy 2019</p>
+      </div>
+    </footer>
 </body>
 </html>
